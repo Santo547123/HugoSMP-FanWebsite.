@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HugoSMP Item Rechner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="https://dunb17ur4ymx4.cloudfront.net/webstore/logos/1f5b4bebbfe612413f9afd73046f37897c52b4cc.png" alt="HugoSMP Logo" onerror="this.style.display='none'">
+            </div>
+            <h1 class="store-heading">Item Rechner</h1>
+            <p class="store-subheading">Berechne die Kosten für deine Items</p>
+        </div>
+
+        <div class="controls">
+            <div class="search-wrapper">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="search" placeholder="Item suchen...">
+            </div>
+            <select id="category">
+                <option value="Alle">Alle Kategorien</option>
+                <option value="Blöcke">Blöcke</option>
+                <option value="Items">Items</option>
+                <option value="Werkzeuge">Werkzeuge</option>
+                <option value="Waffen">Waffen</option>
+                <option value="Rüstung">Rüstung</option>
+                <option value="Nahrung">Nahrung</option>
+                <option value="Tränke">Tränke</option>
+                <option value="Redstone">Redstone</option>
+                <option value="Meta">Meta Items</option>
+            </select>
+            <select id="sortBy">
+                <option value="name">Nach Name</option>
+                <option value="price-asc">Preis aufsteigend</option>
+                <option value="price-desc">Preis absteigend</option>
+                <option value="stack">Nach Stack-Größe</option>
+            </select>
+            <button class="btn-money-guide" id="moneyGuideBtn">
+                <i class="fa-solid fa-coins"></i>
+                <span>Geld verdienen</span>
+            </button>
+        </div>
+
+        <div class="tips-section" id="tipsSection">
+            <div class="tips-header">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span>Tipp</span>
+            </div>
+            <p class="tips-text" id="tipsText"></p>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-card">
+                <i class="fa-solid fa-box-open"></i>
+                <div class="stat-info">
+                    <span class="stat-label">Verfügbare Items</span>
+                    <span class="stat-value" id="totalItems">0</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-tags"></i>
+                <div class="stat-info">
+                    <span class="stat-label">Kategorien</span>
+                    <span class="stat-value">9</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fa-solid fa-fire"></i>
+                <div class="stat-info">
+                    <span class="stat-label">Beliebtestes Item</span>
+                    <span class="stat-value" id="popularItem">Diamond</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="items-grid" id="itemsContainer"></div>
+    </div>
+
+    <div class="footer-spacer"></div>
+
+    <!-- Calculator Modal -->
+    <div class="modal hidden" id="calculatorModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalItemName">Item</h2>
+                <p class="modal-subtitle">Preis: <span id="modalItemPrice">0</span>€ / Stück</p>
+            </div>
+            <div class="calculator-group">
+                <label class="calculator-label">Anzahl der Items</label>
+                <input type="number" class="calculator-input" id="modalItemAmount" value="1" min="1">
+                <div class="quick-amounts">
+                    <button class="quick-btn" data-amount="1">1x</button>
+                    <button class="quick-btn" data-amount="16">16x</button>
+                    <button class="quick-btn" data-amount="32">32x</button>
+                    <button class="quick-btn" data-amount="64">64x</button>
+                </div>
+            </div>
+            <div class="result-box">
+                <div class="result-label">Gesamtpreis</div>
+                <div class="result-value"><span id="modalTotalPrice">0</span>€</div>
+                <div class="result-stacks" id="modalStacks">0 Stacks + 0 Items</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Money Guide Modal -->
+    <div class="modal hidden" id="moneyGuideModal">
+        <div class="modal-content money-modal">
+            <button class="modal-close" id="closeMoneyModalBtn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h2 class="modal-title"><i class="fa-solid fa-coins"></i> Beste Wege Geld zu verdienen</h2>
+                <p class="modal-subtitle">Aktuell profitabelste Methoden auf HugoSMP</p>
+            </div>
+            <div class="money-methods"></div>
+            <div class="money-footer">
+                <i class="fa-solid fa-chart-line"></i>
+                <p>Alle Preise sind Schätzwerte und können je nach Markt variieren</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Button -->
+    <button class="feedback-button" id="feedbackBtn">
+        <i class="fa-solid fa-comment-dots"></i>
+    </button>
+
+    <!-- Feedback Modal -->
+    <div class="modal hidden" id="feedbackModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeFeedbackBtn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h2 class="modal-title"><i class="fa-solid fa-comment-dots"></i> Feedback senden</h2>
+                <p class="modal-subtitle">Teile uns deine Meinung mit!</p>
+            </div>
+            <form id="feedbackForm">
+                <div class="calculator-group">
+                    <label class="calculator-label">Name (optional)</label>
+                    <input type="text" class="calculator-input" id="feedbackName" placeholder="Dein Name oder InGame-Name">
+                </div>
+                <div class="calculator-group">
+                    <label class="calculator-label">Feedback-Typ</label>
+                    <select class="calculator-input" id="feedbackType">
+                        <option value="bug">🐛 Bug Report</option>
+                        <option value="feature">💡 Feature Vorschlag</option>
+                        <option value="praise">❤️ Lob</option>
+                        <option value="other">💬 Sonstiges</option>
+                    </select>
+                </div>
+                <div class="calculator-group">
+                    <label class="calculator-label">Nachricht</label>
+                    <textarea class="calculator-input" id="feedbackMessage" rows="5" placeholder="Dein Feedback..." required></textarea>
+                </div>
+                <button type="submit" class="btn-theme" style="width: 100%;">
+                    <i class="fa-solid fa-paper-plane"></i> Feedback absenden
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+{
+  "items": [
+    {
+      "name": "Diamond",
+      "price": 10,
+      "stack": 64,
+      "category": "Items",
+      "icon": "fa-gem",
+      "popular": true
+    },
+    {
+      "name": "Iron Ingot",
+      "price": 2,
+      "stack": 64,
+      "category": "Items",
+      "icon": "fa-square"
+    },
+    {
+      "name": "Gold Ingot",
+      "price": 5,
+      "stack": 64,
+      "category": "Items",
+      "icon": "fa-coins"
+    },
+    {
+      "name": "Emerald",
+      "price": 15,
+      "stack": 64,
+      "category": "Items",
+      "icon": "fa-diamond"
+    },
+    {
+      "name": "Netherite Ingot",
+      "price": 100,
+      "stack": 64,
+      "category": "Items",
+      "icon": "fa-fire"
+    },
+    {
+      "name": "Ender Pearl",
+      "price": 8,
+      "stack": 16,
+      "category": "Items",
+      "icon": "fa-circle"
+    },
+    {
+      "name": "Stone",
+      "price": 0.1,
+      "stack": 64,
+      "category": "Blöcke",
+      "icon": "fa-cube"
+    },
+    {
+      "name": "Oak Log",
+      "price": 0.5,
+      "stack": 64,
+      "category": "Blöcke",
+      "icon": "fa-tree"
+    },
+    {
+      "name": "Obsidian",
+      "price": 3,
+      "stack": 64,
+      "category": "Blöcke",
+      "icon": "fa-mountain"
+    },
+    {
+      "name": "Glowstone",
+      "price": 2.5,
+      "stack": 64,
+      "category": "Blöcke",
+      "icon": "fa-sun"
+    },
+    {
+      "name": "Diamond Pickaxe",
+      "price": 40,
+      "stack": 1,
+      "category": "Werkzeuge",
+      "icon": "fa-hammer"
+    },
+    {
+      "name": "Diamond Axe",
+      "price": 35,
+      "stack": 1,
+      "category": "Werkzeuge",
+      "icon": "fa-axe"
+    },
+    {
+      "name": "Diamond Shovel",
+      "price": 25,
+      "stack": 1,
+      "category": "Werkzeuge",
+      "icon": "fa-shovel"
+    },
+    {
+      "name": "Diamond Sword",
+      "price": 50,
+      "stack": 1,
+      "category": "Waffen",
+      "icon": "fa-sword"
+    },
+    {
+      "name": "Bow",
+      "price": 20,
+      "stack": 1,
+      "category": "Waffen",
+      "icon": "fa-bow-arrow"
+    },
+    {
+      "name": "Trident",
+      "price": 150,
+      "stack": 1,
+      "category": "Waffen",
+      "icon": "fa-anchor"
+    },
+    {
+      "name": "Diamond Helmet",
+      "price": 45,
+      "stack": 1,
+      "category": "Rüstung",
+      "icon": "fa-hard-hat"
+    },
+    {
+      "name": "Diamond Chestplate",
+      "price": 80,
+      "stack": 1,
+      "category": "Rüstung",
+      "icon": "fa-shield-halved"
+    },
+    {
+      "name": "Diamond Leggings",
+      "price": 70,
+      "stack": 1,
+      "category": "Rüstung",
+      "icon": "fa-vest"
+    },
+    {
+      "name": "Diamond Boots",
+      "price": 40,
+      "stack": 1,
+      "category": "Rüstung",
+      "icon": "fa-socks"
+    },
+    {
+      "name": "Golden Apple",
+      "price": 25,
+      "stack": 64,
+      "category": "Nahrung",
+      "icon": "fa-apple-whole"
+    },
+    {
+      "name": "Cooked Beef",
+      "price": 1,
+      "stack": 64,
+      "category": "Nahrung",
+      "icon": "fa-meat"
+    },
+    {
+      "name": "Bread",
+      "price": 0.5,
+      "stack": 64,
+      "category": "Nahrung",
+      "icon": "fa-bread-slice"
+    },
+    {
+      "name": "Healing Potion",
+      "price": 15,
+      "stack": 1,
+      "category": "Tränke",
+      "icon": "fa-flask"
+    },
+    {
+      "name": "Speed Potion",
+      "price": 12,
+      "stack": 1,
+      "category": "Tränke",
+      "icon": "fa-bolt"
+    },
+    {
+      "name": "Strength Potion",
+      "price": 18,
+      "stack": 1,
+      "category": "Tränke",
+      "icon": "fa-dumbbell"
+    },
+    {
+      "name": "Redstone",
+      "price": 1.5,
+      "stack": 64,
+      "category": "Redstone",
+      "icon": "fa-microchip"
+    },
+    {
+      "name": "Piston",
+      "price": 5,
+      "stack": 64,
+      "category": "Redstone",
+      "icon": "fa-gears"
+    },
+    {
+      "name": "Repeater",
+      "price": 3,
+      "stack": 64,
+      "category": "Redstone",
+      "icon": "fa-repeat"
+    },
+    {
+      "name": "Elytra",
+      "price": 500,
+      "stack": 1,
+      "category": "Meta",
+      "icon": "fa-dragon"
+    },
+    {
+      "name": "Totem of Undying",
+      "price": 200,
+      "stack": 1,
+      "category": "Meta",
+      "icon": "fa-hand-sparkles"
+    },
+    {
+      "name": "Shulker Box",
+      "price": 150,
+      "stack": 1,
+      "category": "Meta",
+      "icon": "fa-box"
+    },
+    {
+      "name": "Beacon",
+      "price": 300,
+      "stack": 1,
+      "category": "Meta",
+      "icon": "fa-tower-broadcast"
+    }
+  ],
+  "tips": [
+    "Kaufe Items in Stacks, um beim Preis zu sparen!",
+    "Meta Items sind besonders wertvoll für fortgeschrittene Spieler!",
+    "Investiere früh in gute Waffen und Rüstung!",
+    "Baumaterialien in großen Mengen kaufen lohnt sich!",
+    "Tränke können dir in schwierigen Situationen das Leben retten!",
+    "Diamonds sind die beste Investierung für langfristige Upgrades!",
+    "Redstone-Items ermöglichen automatische Farmen!",
+    "Halte immer genug Nahrung im Inventar bereit!",
+    "Eine volle Rüstung schützt dich vor 80% des Schadens!",
+    "Verzauberte Items sind mehr wert als normale Items!"
+  ],
+  "moneyMethods": [
+    {
+      "title": "Kupfer Farm",
+      "difficulty": 1,
+      "difficultyText": "Mittel",
+      "icon": "fa-cube",
+      "iconColor": "copper",
+      "description": "Mit einer Effizienz 5 Spitzhacke Kupfer abbauen und zu Kupferbarren umschmelzen",
+      "time": "~45 Min pro Stack",
+      "earning": "80-120€/h",
+      "requirements": [
+        "Effizienz 5 Spitzhacke",
+        "Ofen zum Schmelzen",
+        "Trial Chamber Zugang (optional)"
+      ],
+      "tip": "Trial Chambers haben die höchste Kupfer-Konzentration!"
+    },
+    {
+      "title": "Trial Chamber Looting",
+      "difficulty": 2,
+      "difficultyText": "Schwer",
+      "icon": "fa-dungeon",
+      "iconColor": "trial",
+      "description": "Trial Chambers erkunden und wertvolle Items sowie Kupfer sammeln",
+      "time": "~30-40 Min",
+      "earning": "150-200€/h",
+      "requirements": [
+        "Gute Ausrüstung (Diamond+)",
+        "Heilungs-Tränke",
+        "Trial Chamber Location"
+      ],
+      "tip": "Sammle auch Kupfer während du Trial Chambers räumst!"
+    },
+    {
+      "title": "Harz Farm",
+      "difficulty": 3,
+      "difficultyText": "Sehr Schwer",
+      "icon": "fa-droplet",
+      "iconColor": "resin",
+      "description": "Automatische Harz-Farm bauen für passives Einkommen",
+      "time": "Passiv 24/7",
+      "earning": "200-300€/h",
+      "requirements": [
+        "Viel Redstone & Ressourcen",
+        "Technisches Verständnis",
+        "Zeit für den Aufbau (2-3h)"
+      ],
+      "tip": "Farm läuft auch wenn du offline bist - beste Langzeit-Investition!"
+    }
+  ],
+  "config": {
+    "siteName": "HugoSMP Item Rechner",
+    "subtitle": "Berechne die Kosten für deine Items",
+    "logoUrl": "https://dunb17ur4ymx4.cloudfront.net/webstore/logos/1f5b4bebbfe612413f9afd73046f37897c52b4cc.png",
+    "totalCategories": 9,
+    "popularItem": "Diamond",
+    "tipChangeInterval": 10000,
+    "currency": "€",
+    "discordWebhook": "https://discord.com/api/webhooks/1457758437940400322/ezGO7WbI__u25zwqc2PAkmdZRynZX2QjZ-ijG6P4cCObj4eP1P04YJ_1ZINlqLlNIsFT"
+  }
+}
